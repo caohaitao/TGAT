@@ -29,7 +29,7 @@ bool TGatNotOr::Do()
                 return false;
         }
         m_outputs[0]->m_value = (*(m_or->GetOutPut(0)))->m_value;
-        return false;
+        return true;
 }
 
 void TGatNotOr::Init()
@@ -39,11 +39,11 @@ void TGatNotOr::Init()
                 m_outputs[i] = CreateAPut(this);
         }
 
-        m_and0 = new TGatAnd("and0");
-        m_and1 = new TGatAnd("and1");
-        m_not0 = new TGatNot("not0");
-        m_not1 = new TGatNot("not1");
-        m_or = new TGatOr("or");
+        m_and0 = new TGatAnd("NotOr-and0");
+        m_and1 = new TGatAnd("NotOr-and1");
+        m_not0 = new TGatNot("NotOr-not0");
+        m_not1 = new TGatNot("NotOr-not1");
+        m_or = new TGatOr("NotOr-or");
 
         m_not0->SetInput(m_inputs[1], 0);
         m_not0->Init();

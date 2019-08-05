@@ -5,7 +5,7 @@ class TGatOr :
 {
 public:
         TGatOr(const char * name);
-        ~TGatOr();
+        virtual ~TGatOr();
         virtual bool Do() override;
         virtual void Init() override;
 protected:

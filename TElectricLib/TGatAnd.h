@@ -5,7 +5,7 @@ class TGatAnd :public TGat
 {
 public:
         TGatAnd(const char * name);
-        ~TGatAnd();
+        virtual ~TGatAnd();
         virtual bool Do() override;
         virtual void Init() override;
 protected:

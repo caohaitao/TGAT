@@ -38,7 +38,8 @@ bool TGat::Do()
         }
         for (int i = 0; i < m_input_nums; i++)
         {
-                if ((*(m_inputs[i]))->m_value == -1)
+                TElectricPut * tp = (*(m_inputs[i]));
+                if (tp->m_value == -1)
                 {
                         if (((TGat*)(*(m_inputs[i]))->m_owner)->Do() == false)
                         {

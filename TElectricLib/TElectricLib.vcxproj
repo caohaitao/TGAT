@@ -135,6 +135,9 @@
     <ClInclude Include="TElectricPut.h" />
     <ClInclude Include="TGat.h" />
     <ClInclude Include="TGatAnd.h" />
+    <ClInclude Include="TGatFullAdder.h" />
+    <ClInclude Include="TGatHalfAdder.h" />
+    <ClInclude Include="TGatNFullAdder.h" />
     <ClInclude Include="TGatNot.h" />
     <ClInclude Include="TGatNotOr.h" />
     <ClInclude Include="TGatOr.h" />
@@ -149,6 +152,9 @@
     <ClCompile Include="TElectricPut.cpp" />
     <ClCompile Include="TGat.cpp" />
     <ClCompile Include="TGatAnd.cpp" />
+    <ClCompile Include="TGatFullAdder.cpp" />
+    <ClCompile Include="TGatHalfAdder.cpp" />
+    <ClCompile Include="TGatNFullAdder.cpp" />
     <ClCompile Include="TGatNot.cpp" />
     <ClCompile Include="TGatNotOr.cpp" />
     <ClCompile Include="TGatOr.cpp" />

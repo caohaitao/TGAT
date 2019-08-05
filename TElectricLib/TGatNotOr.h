@@ -8,7 +8,7 @@ class TGatNotOr :
 {
 public:
         TGatNotOr(const char * name);
-        ~TGatNotOr();
+        virtual ~TGatNotOr();
         virtual bool Do() override;
         virtual void Init() override;
 protected:
