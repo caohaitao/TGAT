@@ -17,7 +17,7 @@ bool TGatAnd::Do()
                 return false;
         }
 
-        m_outputs[0]->m_value = (m_inputs[0]->m_value) & (m_inputs[1]->m_value);
+        m_outputs[0]->m_value = ((*(m_inputs[0]))->m_value) & ((*(m_inputs[1]))->m_value);
         return true;
 }
 

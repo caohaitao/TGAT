@@ -5,11 +5,17 @@
 TGatNotOr::TGatNotOr(const char * name)
         :TGat(2, 1,name)
 {
+
 }
 
 
 TGatNotOr::~TGatNotOr()
 {
+        delete m_and0;
+        delete m_and1;
+        delete m_not0;
+        delete m_not1;
+        delete m_or;
 }
 
 bool TGatNotOr::Do()
@@ -22,7 +28,7 @@ bool TGatNotOr::Do()
         {
                 return false;
         }
-        m_outputs[0]->m_value = m_or->GetOutPut(0)->m_value;
+        m_outputs[0]->m_value = (*(m_or->GetOutPut(0)))->m_value;
         return false;
 }
 
@@ -42,18 +48,18 @@ void TGatNotOr::Init()
         m_not0->SetInput(m_inputs[1], 0);
         m_not0->Init();
 
-        m_and0->SetInput(m_inputs[0], 0);
-        m_and0->SetInput(m_not0->GetOutPut(0), 1);
-        m_and0->Init();
-
         m_not1->SetInput(m_inputs[0], 0);
         m_not1->Init();
+
+        m_or->SetInput(m_and0->GetOutPut(0), 0);
+        m_or->SetInput(m_and1->GetOutPut(0), 1);
+        m_or->Init();
 
         m_and1->SetInput(m_not1->GetOutPut(0), 0);
         m_and1->SetInput(m_inputs[1], 1);
         m_and1->Init();
 
-        m_or->SetInput(m_and0->GetOutPut(0), 0);
-        m_or->SetInput(m_and1->GetOutPut(0), 1);
-        m_or->Init();
+        m_and0->SetInput(m_inputs[0], 0);
+        m_and0->SetInput(m_not0->GetOutPut(0), 1);
+        m_and0->Init();
 }
