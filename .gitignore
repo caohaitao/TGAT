@@ -1,0 +1,11 @@
+/.vs
+/x64
+/Debug
+/TElectric/Debug
+*.db
+*.opendb
+/TElectric/x64
+/TElectricLib/Debug
+/TElectricLib/x64
+/ipch
+*.filters
